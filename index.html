@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+<div id="container"></div>
+
+<div id="inputandbuttoncontainer">
+<h1>Write order number of letter you want to see in Turkish Alphabet</h1>
+<br>
+<input id="input" type="text">
+<button onclick="start()">Show Letter</button>
+</div>
+
+</body>
+<script>
+
+let letters = ["A","B","C","Ç","D","E","F","G","Ğ","H","I","İ","J","K","L","M","N","O","Ö","P","R","S","Ş","T","U","Ü","V","Y","Z"];
+
+function start() {
+
+const lettervalue = document.getElementById("input").value;
+
+if ( lettervalue < 30 && lettervalue > 0 ) {
+document.getElementById("container").innerHTML = letters[lettervalue-1];
+}
+else {
+    alert("Lütfen 1 den 29 a kadar bir sayı giriniz. ( 1 ve 29 dahil ) ")
+}
+
+}
+
+</script>
+</html>
